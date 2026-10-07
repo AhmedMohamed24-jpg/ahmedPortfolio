@@ -3189,3 +3189,99 @@ body.light-mode .highlight-name {
 
 
 
+
+/* ======           Loading Screen       =========== Preloader Styles (New Design) ================= */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #1a1a20; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.loader-icon {
+    font-size: 50px;
+    color: var(--primary-color);
+    animation: bounceIcon 1.2s infinite ease-in-out;
+}
+
+/* تنسيق النقاط المتحركة تحت الأيقونة */
+.loader-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.loader-dots span {
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: inline-block;
+    animation: waveDots 1.4s infinite ease-in-out both;
+}
+
+/* تأخير الأنيميشن لكل نقطة عشان تعمل شكل موجي */
+.loader-dots .dot-1 {
+    animation-delay: -0.32s;
+}
+
+.loader-dots .dot-2 {
+    animation-delay: -0.16s;
+}
+
+.loader-dots .dot-3 {
+    animation-delay: 0s;
+}
+
+/* أنيميشن الموجة للنقاط */
+@keyframes waveDots {
+    0%, 80%, 100% { 
+        transform: scale(0);
+        opacity: 0.3;
+    } 
+    40% { 
+        transform: scale(1.0);
+        opacity: 1;
+    }
+}
+
+/* أنيميشن خفيف للأيقونة */
+@keyframes bounceIcon {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* الكلاس اللي الجافاسكريبت بيستخدمه عشان يخفي الشاشة */
+.hide-preloader {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
