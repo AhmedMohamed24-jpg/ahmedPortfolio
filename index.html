@@ -1,42 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-
-
-<body>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<head>
-    <!-- عنوان الموقع بتاعك -->
     <title>Ahmed Mohamed | Portfolio</title>
     
-    <!-- كود الأيقونة (Favicon) -->
-    <link rel="icon" type="image/png" href="./images/icon-192.png">
-    
-    <!-- باقي ملفات الـ CSS والخطوط بتاعتك -->
-</head>
-
-    <!-- استدعاء ملف الـ CSS -->
-    <link rel="stylesheet" href="style.css">
-    <!-- استدعاء مكتبة الأيقونات FontAwesome -->
+    <link rel="icon" type="image/png" href="./images/iconAlmaekea.jpeg">
+<link rel="stylesheet" href="css/style.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- استدعاء خط Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+<body>
 
-
+  
+<!-- =======       Loading Screen  ========== Preloader (شاشة التحميل المحدثة) ================= -->
+    <div id="preloader">
+        <div class="loader-content">
+            <i class="fa-solid fa-code loader-icon"></i>
+            <div class="loader-dots">
+                <span class="dot-1"></span>
+                <span class="dot-2"></span>
+                <span class="dot-3"></span>
+            </div>
+        </div>
+    </div>
+    <!-- ================= Navbar ================= -->
 
 
 
@@ -1237,7 +1225,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+<script>/* ================= Preloader Logic ================= */
+/* ======          Loading Screen   =========== Preloader Logic ================= */
+window.addEventListener('load', function() {
+    // 1000 مللي ثانية يعني ثانية واحدة بالظبط
+    setTimeout(function() {
+        const preloader = document.getElementById('preloader');
+        if(preloader) {
+            preloader.classList.add('hide-preloader');
+        }
+    }, 2400); 
+});
 
+</script>
 
 
 
